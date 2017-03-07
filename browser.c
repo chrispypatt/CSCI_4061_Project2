@@ -173,6 +173,10 @@ while(1){
 									}
 									break;
 						case 1: printf("NEW_URI_ENTERED\n");
+										new_uri_req *request_uri = (new_uri_req*) malloc(sizeof(new_uri_req));
+										request_uri->render_in_tab = buff->req.new_uri_req.render_in_tab;
+										request_uri->uri = buff->req.new_uri_req.uri;
+										write(channel[render_in_tab]->parent_to_child_fd[1],request_uri, sizeof(new_uri_req) );
 										break;
 						case 2: printf("TAB_KILLED\n");
 										if (i==0){

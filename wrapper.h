@@ -82,7 +82,7 @@ int render_web_page_in_tab(char* uri, browser_window* b_window);
 int create_browser(tab_type t_type,
 	int tab_index,
 	void (*create_new_tab_cb)(void),
-	void (*uri_entered_cb)(void),
+  void (*uri_entered_cb)(void),
 	browser_window **b_window,
 	comm_channel *channel);
 int query_tab_id_for_request(GtkWidget* entry, gpointer data);
